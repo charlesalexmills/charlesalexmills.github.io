@@ -55,6 +55,7 @@ var svg = d3.select("body").append("svg")
 d3.csv("https://charlesalexmills.github.io/bar-data.csv", function(error, data) {
 
     data.forEach(function(d) {
+	console.log(d);
         d.date = parseDate(d.date);
         d.value = +d.value;
     });
